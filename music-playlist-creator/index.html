@@ -6,7 +6,7 @@
 
     <title>Music Playlist Explorer</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,87 +17,88 @@
 
     <main>
         <!-- Your main content here -->
-
-            <div class="playlist-container">
-                <div class="playlist-cards">
+        <div class="playlist-container">
+            <div class="playlist-cards">
+                <div>
+                    <img src="./assets/img/playlist.png" class="playlist-cover">
+                </div>
+                <div class = "playlist-info">
+                    <h3>Playlist Title</h3>
+                    <p>Creator Name</p>
+                    <!--Like section of the code-->
                     <div>
-                        <img src="./assets/img/playlist.png" class="playlist-cover">
-                    </div>
-                    <div class = "playlist-info">
-                        <h3>Playlist Title</h3>
-                        <p>Creator Name</p>
+                        <img src="./assets/img/heart-icon.jpeg" height="20px" width="20px"> <!-- Represents the like button-->
+                        0
                     </div>
                 </div>
-                <div class="playlist-cards">
+            </div>
+            <div class="playlist-cards">
+                <div>
+                    <img src="./assets/img/playlist.png" class="playlist-cover">
+                </div>
+                <div class = "playlist-info">
+                    <h3>Playlist Title</h3>
+                    <p>Creator Name</p>
+                    <!--Like section of the code-->
                     <div>
-                        <img src="./assets/img/playlist.png" class="playlist-cover">
-                    </div>
-                    <div class = "playlist-info">
-                        <h3>Playlist Title</h3>
-                        <p>Creator Name</p>
+                        <img src="./assets/img/heart-icon.jpeg" height="20px" width="20px"> <!-- Represents the like button-->
+                        0
                     </div>
                 </div>
-                <div class="playlist-cards">
+            </div>
+            <div class="playlist-cards">
+                <div>
+                    <img src="./assets/img/playlist.png" class="playlist-cover">
+                </div>
+                <div class = "playlist-info">
+                    <h3>Playlist Title</h3>
+                    <p>Creator Name</p>
+                    <!--Like section of the code-->
                     <div>
-                        <img src="./assets/img/playlist.png" class="playlist-cover">
-                    </div>
-                    <div class = "playlist-info">
-                        <h3>Playlist Title</h3>
-                        <p>Creator Name</p>
+                        <img src="./assets/img/heart-icon.jpeg" height="20px" width="20px"> <!-- Represents the like button-->
+                        0
                     </div>
                 </div>
-                <div class="playlist-cards">
-                    <div>
-                        <img src="./assets/img/playlist.png" class="playlist-cover">
-                    </div>
-                    <div class = "playlist-info">
-                        <h3>Playlist Title</h3>
-                        <p>Creator Name</p>
-                    </div>
+            </div>
+            <div class="playlist-cards">
+                <div>
+                    <img src="./assets/img/playlist.png" class="playlist-cover">
                 </div>
-                <div class="playlist-cards">
+                <div class = "playlist-info">
+                    <h3>Playlist Title</h3>
+                    <p>Creator Name</p>
+                    <!--Like section of the code-->
                     <div>
-                        <img src="./assets/img/playlist.png" class="playlist-cover">
-                    </div>
-                    <div class = "playlist-info">
-                        <h3>Playlist Title</h3>
-                        <p>Creator Name</p>
-                    </div>
-                </div>
-                <div class="playlist-cards">
-                    <div>
-                        <img src="./assets/img/playlist.png" class="playlist-cover">
-                    </div>
-                    <div class = "playlist-info">
-                        <h3>Playlist Title</h3>
-                        <p>Creator Name</p>
-                    </div>
-                </div>
-                <div class="playlist-cards">
-                    <div>
-                        <img src="./assets/img/playlist.png" class="playlist-cover">
-                    </div>
-                    <div class = "playlist-info">
-                        <h3>Playlist Title</h3>
-                        <p>Creator Name</p>
-                    </div>
-                </div>
-                <div class="playlist-cards">
-                    <div>
-                        <img src="./assets/img/playlist.png" class="playlist-cover">
-                    </div>
-                    <div class = "playlist-info">
-                        <h3>Playlist Title</h3>
-                        <p>Creator Name</p>
+                        <img src="./assets/img/heart-icon.jpeg" height="20px" width="20px"> <!-- Represents the like button-->
+                        0
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="playlist-info">
+                <!--PIcture to the left | Title &  Artist-->
 
+            </div>
+            <div class="song">
+                <!--Song Cover| Info | Duration-->
+                <div class="song-cover">
+
+                </div>
+                <div class="song-info">
+
+                </div>
+                <div class="song-duration">
+
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <!-- Your footer content here -->
-        <p>This is where my footer is</p>
     </footer>
     <script src="data/data.js"></script>
     <script src="script.js"></script>
