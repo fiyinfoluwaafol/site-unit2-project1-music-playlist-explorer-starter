@@ -20,12 +20,12 @@ footer {
     background-color: cyan;
     height: 2.5rem;
     width: 100%;
-    /* bottom: 0;
-    position: absolute; */
+    bottom: 0;
+    position: fixed;
 }
 
 /* need to look into flexbox froggy */
-.playlist-container {
+#playlist-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -40,6 +40,7 @@ footer {
 
 .playlist-info {
     padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 .playlist-cards {
@@ -47,6 +48,8 @@ footer {
     margin: 25px;
     border-radius: 20px;
 }
+
+/* for modal */
 
 .modal-playlist-cover {
     height: 300px;
@@ -62,9 +65,9 @@ footer {
     padding-left: 30px;
 }
 .modal-overlay {
-    /* display: none; Hidden by default */
+    display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
@@ -125,3 +128,12 @@ footer {
     /* height: 100px; */
     /* width: 100px; */
  }
+
+.fa-heart {
+    color: red;
+}
+
+.fa-heart:hover {
+    color: rgb(214, 111, 111);
+    cursor: pointer;
+}
