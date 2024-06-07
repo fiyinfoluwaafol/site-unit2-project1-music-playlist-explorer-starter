@@ -10,18 +10,38 @@ body {
     background-color: #f8f8f8;
 }
 
-header{
+#header-name {
+    min-height: 70px;
+    width: 100%;
     background-color: cyan;
-    height: 55px;
-    padding: 10px 0px 10px 20px;
+    border-bottom: 1px solid rgb(159, 156, 156);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 2em 0 2em; */
+    /* position: fixed; */
+}
+
+#search-input {
+    width: 250px;
+    height: 25px;
 }
 
 footer {
     background-color: cyan;
     height: 2.5rem;
-    width: 100%;
     bottom: 0;
-    position: fixed;
+    /* position: fixed; */
+}
+
+/* Font Awesome Icons */
+.fa-heart {
+    color: rgb(214, 111, 111);
+}
+.fa-heart:hover {
+    color: red;
+    cursor: pointer;
 }
 
 /* need to look into flexbox froggy */
@@ -31,7 +51,13 @@ footer {
     justify-content: space-evenly;
     padding-bottom: 2.5rem;
 }
-.playlist-cover {
+
+.playlist-card {
+    border: 1px solid black;
+    margin: 25px;
+    border-radius: 20px;
+}
+.playlist-art {
     border-radius: 20px 20px 0px 0px;
     height: 300px;
     width: 300px;
@@ -43,49 +69,9 @@ footer {
     padding-bottom: 10px;
 }
 
-.playlist-cards {
-    border: 1px solid black;
-    margin: 25px;
-    border-radius: 20px;
-}
-
-/* for modal */
-
-.modal-playlist-cover {
-    height: 300px;
-    width: 300px;
-    border-radius: 10px;
-}
-
-.modal-playlist-info {
-    display: flex;
-}
-
-.modal-playlist-info > .playlist-info{
-    padding-top: 20px;
-    padding-left: 30px;
-}
-.modal-overlay {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    overflow: auto;
- }
- .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto; /* 5% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 15px;
-    width: 80%; /* Could be more or less, depending on screen size */
-
- }
- .close {
+/* Modal Overlay */
+/* Close Button Styling */
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -98,6 +84,45 @@ footer {
     cursor: pointer;
  }
 
+ .modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    overflow: auto;
+ }
+
+ .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 80%; /* Could be more or less, depending on screen size */
+
+ }
+
+ .modal-content .playlist-head {
+     display: flex;
+ }
+
+.modal-content .playlist-art {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+.modal-content .playlist-info{
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+
 .song {
     display: flex;
     min-height: 10vh;
@@ -106,64 +131,53 @@ footer {
     border-radius: 10px;
 }
 
-.song-duration {
-    width: 20%;
-    /* padding-top: 10px; */
-    /* padding-bottom: 10%; */
-}
-
-.song-duration > p {
-    text-align: center;
-}
 .song-cover{
     width: 10%
 }
 
-.song-info{
-    width: 80%;
-    padding-left: 10px;
-}
-.song-cover > img {
+.song-cover img {
     height: 100%;
     width: 100%;
     border-radius: 10px 0px 0px 10px;
     /* height: 100px; */
     /* width: 100px; */
  }
- .song-text {
-    display: flex;
-    align-items: center;
-    width: 100%;
- }
 
-.fa-heart {
-    color: rgb(214, 111, 111);
+.song-text {
+   display: flex;
+   align-items: center;
+   width: 100%;
 }
 
-.fa-heart:hover {
-    color: red;
-    cursor: pointer;
+.song-info{
+    width: 80%;
+    padding-left: 10px;
 }
 
-#search-input{
-    width: 250px;
-    height: 25px;
+.song-duration {
+    width: 20%;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10%; */
 }
 
-#header-name {
-    min-height: 70px;
-    background-color: cyan;
-    border-bottom: 1px solid rgb(159, 156, 156);
+.song-duration p {
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2em 0 2em;
 }
+
+
+/* Styling for featured.html */
 
 #featured-page {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.song-feat {
+    /* display: flex; */
+    min-height: 10vh;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
 }
