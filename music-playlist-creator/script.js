@@ -65,6 +65,7 @@ function loadModalOverlay(playlist){ // playlist contains the specific playlist 
         <h3>${playlist.playlist_creator}</h3>
         </div>
     </div>
+    <button id="shuffle-button">Shuffle <i class="fa-solid fa-shuffle"></i></button>
     `;
     // Time to work on the songs
     let modalContent = document.getElementsByClassName('modal-content')[0];
@@ -106,10 +107,10 @@ function loadModalOverlay(playlist){ // playlist contains the specific playlist 
         }
         });
 
-    // const shuffleButton = document.getElementById('shuffle-button');
-    // shuffleButton.addEventListener('click', () => {
-    //     shuffleSongs(playlist);
-    // });
+    const shuffleButton = document.getElementById('shuffle-button');
+    shuffleButton.addEventListener('click', () => {
+        shuffleSongs(playlist);
+    });
 
 }
 
