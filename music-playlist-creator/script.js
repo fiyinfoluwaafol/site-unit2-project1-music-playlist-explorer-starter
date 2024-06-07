@@ -124,7 +124,7 @@ function shuffleSongs(playlist) {
   }
 
 loadPlaylists();
-var cardElements = document.getElementsByClassName("playlist-cards");
+let cardElements = document.getElementsByClassName("playlist-cards");
     for (let i = 0; i < cardElements.length; i ++) {
         cardElements[i].addEventListener('click',  (event) => { // What does event do?
             if (event.target.classList.contains('likeButton')) {
@@ -135,3 +135,12 @@ var cardElements = document.getElementsByClassName("playlist-cards");
               }
         });
     }
+
+function loadFeaturedPage() {
+    let randPosition = Math.floor(Math.random() * playlistData.length);
+    let featuredPlaylist = playlistData[randPosition];
+    let featuredPage = document.getElementById('featured-page');
+    featuredPage.innerHTML = `
+    <div class="featured-playlist-info">
+    `;
+}
