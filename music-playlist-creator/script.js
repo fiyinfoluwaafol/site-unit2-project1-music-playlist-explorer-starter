@@ -1,11 +1,15 @@
 const playlistData = data.playlists
+let searchInput = document.getElementById("search-input");
 
 const songDeck = playlistData[0].songs;
 
-function loadPlaylists() {
+function loadPlaylists(filterText = '') {
+    let filteredPlaylistData = playlistData.filter(item => item['playlist_name'].toLowerCase().includes(filterText.toLowerCase()) || item['playlist_creator'].toLowerCase().includes(filterText.toLowerCase()))
+
     let cardList = document.getElementById('playlist-container');
-    for (let i=0; i < playlistData.length; i++){
-        let card = playlistData[i];
+    cardList.innerHTML = '';
+    for (let i=0; i < filteredPlaylistData.length; i++){
+        let card = filteredPlaylistData[i];
         cardList.innerHTML += `
             <div class="playlist-cards">
                 <div>
@@ -44,6 +48,10 @@ function toggleLike(button) {
 
     likeCountSpan.textContent = likeCount;
   }
+
+  searchInput.addEventListener('input', (event) => {
+    loadPlaylists(event.target.value);
+  })
 
 function loadModalOverlay(playlist){ // playlist contains the specific playlist object
     let modalOverlay = document.getElementsByClassName('modal-overlay')[0];
@@ -126,12 +134,3 @@ var cardElements = document.getElementsByClassName("playlist-cards");
               }
         });
     }
-
-    // playlistElement.addEventListener('click', (event) => {
-    //     if (event.target.classList.contains('likeButton')) {
-    //       toggleLike(event.target);
-    //     } else {
-    //       loadModalOverlay(item);
-    //       modal.style.display = 'block';
-    //     }
-    //   });
