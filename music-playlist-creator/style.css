@@ -144,3 +144,19 @@ footer {
     color: red;
     cursor: pointer;
 }
+
+#search-input{
+    width: 250px;
+    height: 25px;
+}
+
+#header-name {
+    min-height: 70px;
+    background-color: cyan;
+    border-bottom: 1px solid rgb(159, 156, 156);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em 0 2em;
+}

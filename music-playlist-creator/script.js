@@ -15,14 +15,35 @@ function loadPlaylists() {
                     <h3>${card.playlist_name}</h3>
                     <p>${card.playlist_creator}</p>
                 <div>
-                    <i id="likeButton" class="fas fa-heart"></i>
+                    <i id="likeButton" class="fa-regular fa-heart likeButton"></i>
                     <span>${card.likeCount}</span>
                 </div>
             </div>
         `;
     }
+
 }
 
+
+
+function toggleLike(button) {
+    const likeCountSpan = button.nextElementSibling;
+    let likeCount = parseInt(likeCountSpan.textContent);
+
+    if (button.classList.contains('liked')) {
+      button.classList.remove('liked');
+      button.classList.add('fa-regular');
+      button.classList.remove('fa-solid');
+      likeCount = 0;
+    } else {
+      button.classList.add('liked');
+      button.classList.add('fa-solid');
+      button.classList.remove('fa-regular');
+      likeCount = 1;
+    }
+
+    likeCountSpan.textContent = likeCount;
+  }
 
 function loadModalOverlay(playlist){ // playlist contains the specific playlist object
     let modalOverlay = document.getElementsByClassName('modal-overlay')[0];
@@ -76,14 +97,41 @@ function loadModalOverlay(playlist){ // playlist contains the specific playlist 
             document.getElementsByClassName('modal-overlay')[0].style.display = 'none';
         }
         });
+
+    // const shuffleButton = document.getElementById('shuffle-button');
+    // shuffleButton.addEventListener('click', () => {
+    //     shuffleSongs(playlist);
+    // });
+
 }
+
+function shuffleSongs(playlist) {
+    for (let i = playlist.songs.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [playlist.songs[i], playlist.songs[j]] = [playlist.songs[j], playlist.songs[i]];
+    }
+
+    loadModalOverlay(playlist);
+  }
 
 loadPlaylists();
 var cardElements = document.getElementsByClassName("playlist-cards");
     for (let i = 0; i < cardElements.length; i ++) {
         cardElements[i].addEventListener('click',  (event) => { // What does event do?
-            loadModalOverlay(playlistData[i]);
-            document.getElementsByClassName('modal-overlay')[0].style.display = 'block';
-            // console.log(playlistData[i]);
+            if (event.target.classList.contains('likeButton')) {
+                toggleLike(event.target);
+              } else {
+                loadModalOverlay(playlistData[i]);
+                document.getElementsByClassName('modal-overlay')[0].style.display = 'block';
+              }
         });
     }
+
+    // playlistElement.addEventListener('click', (event) => {
+    //     if (event.target.classList.contains('likeButton')) {
+    //       toggleLike(event.target);
+    //     } else {
+    //       loadModalOverlay(item);
+    //       modal.style.display = 'block';
+    //     }
+    //   });
