@@ -23,6 +23,7 @@ function loadPlaylists() {
     }
 }
 
+
 function loadModalOverlay(playlist){ // playlist contains the specific playlist object
     let modalOverlay = document.getElementsByClassName('modal-overlay')[0];
     modalOverlay.innerHTML = `
@@ -45,17 +46,19 @@ function loadModalOverlay(playlist){ // playlist contains the specific playlist 
             <div class="song-cover">
                 <img src="${song.cover_art}">
             </div>
-            <div class="song-info">
-                <p>
-                    ${song.title}
-                    <br>
-                    ${song.artist}
-                    <br>
-                    ${song.album}
-                </p>
-            </div>
-            <div class="song-duration">
-                <p>${song.duration}</p>
+            <div class="song-text">
+                <div class="song-info">
+                    <p>
+                        ${song.title}
+                        <br>
+                        ${song.artist}
+                        <br>
+                        ${song.album}
+                    </p>
+                </div>
+                <div class="song-duration">
+                    <p>${song.duration}</p>
+                </div>
             </div>
         </div>
         `;
@@ -63,8 +66,17 @@ function loadModalOverlay(playlist){ // playlist contains the specific playlist 
     modalOverlay.innerHTML += `
     </div>
     `;
-}
+    let closeButton = document.getElementsByClassName('close')[0];
+    closeButton.addEventListener('click',  (event) => { // What does event do?
+        document.getElementsByClassName('modal-overlay')[0].style.display = 'none';
+    });
 
+    window.addEventListener('click', (event) => {
+        if (event.target === modalOverlay){
+            document.getElementsByClassName('modal-overlay')[0].style.display = 'none';
+        }
+        });
+}
 
 loadPlaylists();
 var cardElements = document.getElementsByClassName("playlist-cards");
