@@ -130,10 +130,10 @@ footer {
  }
 
 .fa-heart {
-    color: red;
+    color: rgb(214, 111, 111);
 }
 
 .fa-heart:hover {
-    color: rgb(214, 111, 111);
+    color: red;
     cursor: pointer;
 }
