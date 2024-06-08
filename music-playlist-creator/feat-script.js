@@ -30,11 +30,11 @@ function loadFeaturedPage() {
             <div class="song-text">
                 <div class="song-info">
                     <p>
-                        ${song.title}
+                        <i class="fas fa-music"></i> ${song.title}
                         <br>
-                        ${song.artist}
+                        <i class="fas fa-user"></i> ${song.artist}
                         <br>
-                        ${song.album}
+                        <i class="fas fa-compact-disc"></i> ${song.album}
                     </p>
                 </div>
                 <div class="song-duration">
