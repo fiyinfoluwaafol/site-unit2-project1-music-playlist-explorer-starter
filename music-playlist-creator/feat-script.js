@@ -7,19 +7,22 @@ function loadFeaturedPage() {
     let featuredPage = document.getElementById('featured-page');
     featuredPage.innerHTML = `
     <div id="feau-playlist-info">
-    <div class="modal-playlist-info">
-        <img src="${featuredPlaylist.playlist_art}" class="modal-playlist-cover">
-        <div class="playlist-info">
-        <h1>${featuredPlaylist.playlist_name}</h1>
-        <h3>${featuredPlaylist.playlist_creator}</h3>
+        <div class="modal-playlist-info">
+            <img src="${featuredPlaylist.playlist_art}" class="modal-playlist-cover">
+            <div class="playlist-info">
+                <h1>${featuredPlaylist.playlist_name}</h1>
+                <h3>${featuredPlaylist.playlist_creator}</h3>
+            </div>
         </div>
-    </div>
-    <div>
-    blah
+
     `;
+    let songsContainer = document.createElement('div');
+    songsContainer.classList.add('song-container');
+    featuredPage.appendChild(songsContainer);
+    songsContainer = document.getElementsByClassName('song-container')[0];
     for (let i=0; i < featuredPlaylist.songs.length; i++){
         let song = featuredPlaylist.songs[i];
-        featuredPage.innerHTML += `
+        songsContainer.innerHTML += `
         <div class="song-feat">
             <div class="song-cover">
                 <img src="${song.cover_art}">
@@ -41,8 +44,7 @@ function loadFeaturedPage() {
         </div>
         `;
     }
-    modalOverlay.innerHTML += `
-    </div>
+    featuredPage.innerHTML += `
     </div>
     `;
 }
