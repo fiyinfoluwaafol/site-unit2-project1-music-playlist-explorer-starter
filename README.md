@@ -2,9 +2,7 @@
 
 Submitted by: **Fiyinfoluwa Afolayan**
 
-Estimated time spent: **** hours spent in total
-
-Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
+Estimated time spent: **40** hours spent in total
 
 ### Application Features
 
@@ -50,9 +48,7 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
-`ADD_EMBEDDED_CODE_HERE`
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/3118f199067242a9bac59d31c77a6537?sid=c829fae3-63cb-442a-abba-70af06866161" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Reflection
 
@@ -66,11 +62,11 @@ If I had more time, I definitely would have worked more on the visual appeal of 
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+It was definitely a huge learign experience learning through doing, I am always up for the challenge. Initially, I struggled quite a bit with styling my website and using CSS to have my website appear as I pictured didn't always turn out right. But on the other hand, it was really interesting to add functionality to the website using javascript, especially when implementing the search functionality. It allows me to properly see how things like time complexity of operations could potentially affect performance, paricularly at scale.
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+- Font Awesome (https://fontawesome.com/)
 
 ### Shout out
 
