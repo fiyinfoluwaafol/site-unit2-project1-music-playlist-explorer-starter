@@ -48,7 +48,14 @@ Estimated time spent: **40** hours spent in total
 
 ### Walkthrough Video
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/3118f199067242a9bac59d31c77a6537?sid=c829fae3-63cb-442a-abba-70af06866161" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div>
+    <a href="https://www.loom.com/share/3118f199067242a9bac59d31c77a6537">
+      <p>Music Playlist Explorer App 🎵 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/3118f199067242a9bac59d31c77a6537">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/3118f199067242a9bac59d31c77a6537-with-play.gif">
+    </a>
+  </div>
 
 ### Reflection
 
