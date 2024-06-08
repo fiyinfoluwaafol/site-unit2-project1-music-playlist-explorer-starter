@@ -2,7 +2,7 @@
 
 Submitted by: **Fiyinfoluwa Afolayan**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **** hours spent in total
 
 Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
 
@@ -58,11 +58,11 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+Initially I had felt a bit unprepared for styling with CSS specifcially as it related to using flexbox, but ultimately it seems to make more sense to me now
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
-Add your response here
+If I had more time, I definitely would have worked more on the visual appeal of the website
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
@@ -74,4 +74,4 @@ Add your response here
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+I would definitely give a shoutout to Ayomide, he really explained some of my styling preferences to me, particularly CSS flexbox
